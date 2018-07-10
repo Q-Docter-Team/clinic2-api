@@ -3,6 +3,6 @@
 module.exports= {
    database: 'clinic',
    username: 'root',
-   password: ''
+   password: (process.env.production) ? 'root' : ''
 }
 
