@@ -8,6 +8,9 @@ const User = sequelize.define('User', {
     lastname: {
         type: Sequelize.STRING
     },
+    dob: {
+        type: Sequelize.DATE
+    },
     telephone: {
         type: Sequelize.STRING,
         unique: true
