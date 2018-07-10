@@ -5,13 +5,9 @@ const Profilepatent = sequelize.define('profilepatents', {
     userId: {
         type: Sequelize.INTEGER(10).UNSIGNED
     },
-    queue: {
+    diagnose: {
         type: Sequelize.STRING(191)
-    },
-    other: {
-        type: Sequelize.STRING(191) 
-    }
-    
+    }   
 });
 
 Profilepatent

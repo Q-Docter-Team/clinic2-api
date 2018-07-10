@@ -1,13 +1,15 @@
 const User = require('./users.model');
 const Symptom = require('../symptoms/symptoms.model');
 const Reseration = require('../reserations/reserations.model');
+const Profilepatent = require('../profilepatents/profilepatents.model');
 const moment = require('../../../utils/moment');
 
 const findAll = async () => {
     const options = {
         include: [
             { model: Symptom },
-            { model: Reseration }
+            { model: Reseration },
+            { model: Profilepatent }
         ]
     }
 
@@ -27,7 +29,8 @@ const findById = async (id) => {
     const options = {
         include: [
             { model: Symptom },
-            { model: Reseration }
+            { model: Reseration },
+            { model: Profilepatent }
         ]
     }
     const user = await User.findById(id, options);
@@ -49,7 +52,8 @@ const updateById = async (id, data) => {
     const options2 = {
         include: [
             { model: Symptom },
-            { model: Reseration }
+            { model: Reseration },
+            { model: Profilepatent }
         ]
     }
     
@@ -73,7 +77,8 @@ const findUserByTel = async (tel) => {
         where: {telephone: tel},
         include: [
             { model: Symptom },
-            { model: Reseration }
+            { model: Reseration },
+            { model: Profilepatent }
         ]
     }
     const user = await User.findOne(options);

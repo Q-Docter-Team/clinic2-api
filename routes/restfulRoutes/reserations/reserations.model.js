@@ -5,6 +5,9 @@ const Reseration = sequelize.define('reserations', {
     userId: {
         type: Sequelize.INTEGER(10).UNSIGNED
     },
+    periodId: {
+        type: Sequelize.INTEGER(10).UNSIGNED  
+    },
     queue: {
         type: Sequelize.STRING(191)
     },
