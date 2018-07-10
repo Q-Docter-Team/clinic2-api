@@ -5,6 +5,9 @@ const Profilepatent = sequelize.define('profilepatents', {
     userId: {
         type: Sequelize.INTEGER(10).UNSIGNED
     },
+    medicineId: {
+        type: Sequelize.INTEGER(10).UNSIGNED
+    },
     diagnose: {
         type: Sequelize.STRING(191)
     }   
